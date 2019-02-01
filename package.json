@@ -4,6 +4,9 @@
   "main": "index.js",
   "license": "WTFPL",
   "private": true,
+  "scripts": {
+    "dev": "webpack --mode development --watch --progress"
+  },
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
