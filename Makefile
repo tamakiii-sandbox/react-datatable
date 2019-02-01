@@ -1,2 +1,2 @@
-dev:
-	yarn run dev
+%:
+	yarn run $@
