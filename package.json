@@ -3,5 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "WTFPL",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "styled-components": "^4.1.3"
+  }
 }

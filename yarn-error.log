@@ -1,0 +1,42 @@
+Arguments: 
+  /usr/local/bin/node /opt/yarn-v1.12.3/bin/yarn.js add react react-dom styled-component
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+Yarn version: 
+  1.12.3
+
+Node version: 
+  8.15.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/styled-component: Not found
+      at Request.params.callback [as _callback] (/opt/yarn-v1.12.3/lib/cli.js:65894:18)
+      at Request.self.callback (/opt/yarn-v1.12.3/lib/cli.js:129018:22)
+      at emitTwo (events.js:126:13)
+      at Request.emit (events.js:214:7)
+      at Request.<anonymous> (/opt/yarn-v1.12.3/lib/cli.js:129990:10)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at IncomingMessage.<anonymous> (/opt/yarn-v1.12.3/lib/cli.js:129912:12)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:111:20)
+
+npm manifest: 
+  {
+    "name": "react-datatable",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "WTFPL",
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
