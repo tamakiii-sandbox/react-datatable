@@ -1,0 +1,7 @@
+{
+  "name": "react-datatable",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "WTFPL",
+  "private": true
+}
