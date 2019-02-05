@@ -1,19 +1,20 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-interface Props {};
+interface Props {
+  title: string
+};
 interface State {};
 
 class App extends React.PureComponent<Props, State> {
   render() {
     return (
-      <p>hello~~ world!!</p>
+      <p>{this.props.title}</p>
     );
   }
 }
 
 ReactDOM.render(
-  <App />,
+  <App title="hello" />,
   document.querySelector("#app")
 );
-
