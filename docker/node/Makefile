@@ -1,5 +1,3 @@
-%:
-	docker-compose run --rm node ash -c 'trap "make -C /app $@" EXIT'
+override LOGIN_SHELL = ash
 
-sh:
-	docker-compose run --rm node ash
+include ../Makefile
