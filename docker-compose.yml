@@ -10,8 +10,6 @@ services:
     build: docker/http
     working_dir: /app
     ports:
-      - 80:80
-      - 443:332
+      - 8080:8080
     volumes:
       - .:/app
-      - ./dist:/app/public/dist

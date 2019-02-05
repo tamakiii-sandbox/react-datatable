@@ -7,7 +7,7 @@ interface State {};
 class App extends React.PureComponent<Props, State> {
   render() {
     return (
-      <p>hello</p>
+      <p>hello~~ world!!</p>
     );
   }
 }
