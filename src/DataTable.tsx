@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import { any } from "prop-types";
 
 export interface Column {
   id: string;
@@ -11,8 +12,13 @@ export interface Table<R> {
   body: Array<R>;
 };
 
+export interface Filter<T> {
+  (value: T, index: number, array: T[]): boolean
+}
+
 export interface Props {
   table: Table<any>;
+  filter?: Filter<any>;
 };
 
 export class DataTable extends React.Component<Props, any> {
@@ -20,25 +26,30 @@ export class DataTable extends React.Component<Props, any> {
     super(props);
   }
 
+  getRows() {
+    const body = this.props.table.body;
+    return this.props.filter ? body.filter(this.props.filter) : body;
+  }
+
   render() {
     return (
       <table>
         <thead>
           <tr>
-            {this.props.table.head.map((head) => {
+            {this.props.table.head.map((head, index) => {
               return (
-                <th>{head.label}</th>
+                <th key={index}>{head.label}</th>
               );
             })}
           </tr>
         </thead>
         <tbody>
-          {this.props.table.body.map((row) => {
+          {this.getRows().map((row: any, index: number) => {
             return (
-              <tr>
-                {this.props.table.head.map((head) => {
+              <tr key={index}>
+                {this.props.table.head.map((head, idx) => {
                   return (
-                    <td>{row[head.id]}</td>
+                    <td key={idx}>{row[head.id]}</td>
                   );
                 })}
               </tr>
