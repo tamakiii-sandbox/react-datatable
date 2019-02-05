@@ -4,11 +4,6 @@
   "main": "index.js",
   "license": "WTFPL",
   "private": true,
-  "scripts": {
-    "dev": "webpack --mode development --watch --progress",
-    "eslint": "eslint src/**/*.{ts,tsx}",
-    "eslint:fix": "eslint src/**/*.{ts,tsx} --fix"
-  },
   "dependencies": {
     "@types/react-dom": "^16.0.11",
     "react": "^16.7.0",
