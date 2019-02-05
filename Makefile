@@ -11,4 +11,4 @@ lint-fix:
 	npx eslint src/**/*.{ts,tsx} --fix
 
 webpack-dev-server:
-	npx webpack-dev-server --hot --mode development --port 8080 --content-base public --output-public-path dist --host 0.0.0.0
+	trap "npx nodemon --watch webpack.config.js --exec 'npx webpack-dev-server --hot --mode development --port 8080 --content-base public --watch-content-base --output-public-path dist --host 0.0.0.0'" EXIT
