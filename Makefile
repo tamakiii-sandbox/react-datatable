@@ -1,2 +1,2 @@
 %:
-	yarn run $@
+	trap 'yarn run $@' EXIT
