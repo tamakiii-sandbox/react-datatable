@@ -10,6 +10,7 @@
     "eslint:fix": "eslint src/**/*.{ts,tsx} --fix"
   },
   "dependencies": {
+    "@types/react-dom": "^16.0.11",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "styled-components": "^4.1.3"
