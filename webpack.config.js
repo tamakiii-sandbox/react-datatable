@@ -9,6 +9,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
+  resolve: {
+    modules: [path.resolve('./src'), path.resolve('./node_modules')],
+    extensions: ['.ts', '.tsx', '.js', '.jsx']
+
+  },
   module: {
     rules: [
       {
