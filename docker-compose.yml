@@ -1,9 +1,17 @@
 version: '3.7'
 services:
   node:
-    build:
-      context: .
-      dockerfile: docker/node/Dockerfile
+    build: docker/node
     working_dir: /app
     volumes:
       - .:/app
+
+  http:
+    build: docker/http
+    working_dir: /app
+    ports:
+      - 80:80
+      - 443:332
+    volumes:
+      - .:/app
+      - ./dist:/app/public/dist
